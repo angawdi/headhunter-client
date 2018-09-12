@@ -10,7 +10,7 @@ import Nav from './layout/Nav';
 import Profile from './Profile';
 import Signup from './auth/Signup';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -48,7 +48,7 @@ class App extends Component {
     }
     else {
       console.log('No token was found');
-      localStorage.removeItem('mernToken');
+      // localStorage.removeItem('mernToken');
       this.setState({
         user: null
       });
@@ -78,5 +78,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
