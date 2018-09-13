@@ -1,5 +1,5 @@
 import React from 'react';
-// import './todoInput.css';
+import './todoInput.css';
 
 export default class TodoInput extends React.Component {
   constructor(props) {
@@ -22,11 +22,10 @@ export default class TodoInput extends React.Component {
     })
   }
 
-  handleSubmit = (todo) => {
-    todo.preventDefault();
-    console.log(todo);
+  handleSubmit = (e) => {
+    e.preventDefault();
     // Ensure a todo was actually entered before submitting
-    this.props.addTodo(todo);
+    this.props.addTodo(this.state);
     this.setState({title: '',
       content: '',
       date: ''
@@ -42,8 +41,9 @@ export default class TodoInput extends React.Component {
         <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
         <input type="text" name="content" value={this.state.content} onChange={this.handleChange}/> 
         <input type="text" name="date" value={this.state.date} onChange={this.handleChange} /> <br />
-        <input className="btn btn-primary" type="submit" value="Submit" />
+        <button className="btn btn-primary" type="submit">Submit</button>
       </form>
     );
   }
 }
+
