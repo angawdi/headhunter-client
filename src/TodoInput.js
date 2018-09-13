@@ -45,7 +45,7 @@ export default class TodoInput extends React.Component {
         <input type="text" name="content" value={this.state.content} onChange={this.handleChange}/> <br /><br /><br />
 
         <label for="title">Title:</label> <br />
-        <input type="text" name="date" value={this.state.date} onChange={this.handleChange} /> <br /><br /> <br />
+        <input type="date" name="date" value={this.state.date} onChange={this.handleChange} /> <br /><br /> <br />
         <button className="btn btn-primary" type="submit">Submit</button>
       </form>
     );
