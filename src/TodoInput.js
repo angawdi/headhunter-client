@@ -7,7 +7,6 @@ export default class TodoInput extends React.Component {
     this.state = {
       newTodo: {
         title: '',
-        subtitle: '',
         content: '',
         date: ''
       }
@@ -41,10 +40,7 @@ export default class TodoInput extends React.Component {
       <form className="TaskForm" onSubmit={this.handleSubmit}>
         <label for="title">Title:</label> <br />
         <input type="text" name="title" value={this.state.title} onChange={this.handleChange} /> <br /><br /><br />
-
-        <label for="title">Subtitle:</label> <br />
-        <input type="text" name="subtitle" value={this.state.title} onChange={this.handleChange} /> <br /><br /><br />
-
+        
         <label for="title">Content:</label> <br />
         <input type="text" name="content" value={this.state.content} onChange={this.handleChange}/> <br /><br /><br />
 
